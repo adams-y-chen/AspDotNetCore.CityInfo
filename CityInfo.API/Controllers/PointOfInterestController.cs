@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CityInfo.API.Models;
 using CityInfo.API.Services;
 using Microsoft.AspNetCore.JsonPatch;
@@ -16,15 +17,18 @@ namespace CityInfo.API.Controllers
         private ILogger<PointOfInterestController> _logger;
         private IMailService _mailService;
         private ICityInfoRepository _cityInfoRepository;
+        private IMapper _mapper;
 
         // logger is injected by DI container.
         public PointOfInterestController(ILogger<PointOfInterestController> logger,
             IMailService mailService,
-            ICityInfoRepository cityInfoRepository)
+            ICityInfoRepository cityInfoRepository,
+            IMapper mapper)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _mailService = mailService ?? throw new ArgumentNullException(nameof(mailService));
             _cityInfoRepository = cityInfoRepository ?? throw new ArgumentNullException(nameof(cityInfoRepository));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet]
@@ -40,17 +44,19 @@ namespace CityInfo.API.Controllers
 
                 var pointOfInterestEntities = _cityInfoRepository.GetPointsOfInterestForCity(cityId);
 
-                var result = new List<PointOfInterestDto>();
+                //var result = new List<PointOfInterestDto>();
 
-                foreach (var p in pointOfInterestEntities)
-                {
-                    result.Add(new PointOfInterestDto
-                    {
-                        Id = p.Id,
-                        Name = p.Name,
-                        Description = p.Description
-                    });
-                }
+                //foreach (var p in pointOfInterestEntities)
+                //{
+                //    result.Add(new PointOfInterestDto
+                //    {
+                //        Id = p.Id,
+                //        Name = p.Name,
+                //        Description = p.Description
+                //    });
+                //}
+
+                var result = _mapper.Map<IEnumerable<PointOfInterestDto>>(pointOfInterestEntities);
 
                 return Ok(result);
             } 
@@ -78,14 +84,14 @@ namespace CityInfo.API.Controllers
                 return NotFound();
             }
 
-            var result = new PointOfInterestDto()
-            {
-                Id = pointOfInterestEntity.Id,
-                Name = pointOfInterestEntity.Name,
-                Description = pointOfInterestEntity.Description
-            };
+            //var result = new PointOfInterestDto()
+            //{
+            //    Id = pointOfInterestEntity.Id,
+            //    Name = pointOfInterestEntity.Name,
+            //    Description = pointOfInterestEntity.Description
+            //};
 
-            return Ok(result);
+            return Ok(_mapper.Map<PointOfInterestDto>(pointOfInterestEntity));
         }
 
         [HttpPost]

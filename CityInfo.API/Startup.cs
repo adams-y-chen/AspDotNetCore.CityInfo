@@ -47,6 +47,10 @@ namespace CityInfo.API
             var connectionString = _configuration["connectionStrings:cityInfoDBConnectionString"];
             services.AddDbContext<CityInfoContext>(o => o.UseSqlServer(connectionString));
 
+            // Support mapping between DB entity and API DTO model.
+            // AutoMapper scan the profiles (e.g. in Profiles folder of this project) in specified assemblies.
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 #if DEBUG
             services.AddSingleton<IMailService, LocalMailService>();
 #else

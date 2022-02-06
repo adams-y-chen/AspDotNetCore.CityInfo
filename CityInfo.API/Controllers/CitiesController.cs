@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CityInfo.API.Models;
 using CityInfo.API.Services;
 using Microsoft.AspNetCore.Http;
@@ -14,10 +15,13 @@ namespace CityInfo.API.Controllers
     public class CitiesController : ControllerBase
     {
         private readonly ICityInfoRepository _cityInfoRepository;
+        private readonly IMapper _mapper;
 
-        public CitiesController(ICityInfoRepository cityInfoRepository)
+        public CitiesController(ICityInfoRepository cityInfoRepository,
+            IMapper mapper)
         {
             _cityInfoRepository = cityInfoRepository ?? throw new ArgumentNullException(nameof(cityInfoRepository));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet]
@@ -25,17 +29,20 @@ namespace CityInfo.API.Controllers
         {
             var cityEntities = _cityInfoRepository.GetCities();
 
-            var results = new List<CityWithoutPointOfInterestDto>();
+            //var results = new List<CityWithoutPointOfInterestDto>();
 
-            foreach (var cityEntity in cityEntities)
-            {
-                results.Add(new CityWithoutPointOfInterestDto()
-                {
-                    Id = cityEntity.Id,
-                    Name = cityEntity.Name,
-                    Description = cityEntity.Description
-                });
-            }
+            //foreach (var cityEntity in cityEntities)
+            //{
+            //    results.Add(new CityWithoutPointOfInterestDto()
+            //    {
+            //        Id = cityEntity.Id,
+            //        Name = cityEntity.Name,
+            //        Description = cityEntity.Description
+            //    });
+            //}
+
+            // Map from Entities.City to CityDto. Defined in CityProfile.
+            var results = _mapper.Map<IEnumerable<CityWithoutPointOfInterestDto>>(cityEntities);
 
             return Ok(results);
         }
@@ -52,34 +59,38 @@ namespace CityInfo.API.Controllers
 
             if (includePointsOfInterest)
             {
-                var cityResult = new CityDto()
-                {
-                    Id = cityEntity.Id,
-                    Name = cityEntity.Name,
-                    Description = cityEntity.Description
-                };
+                //var cityResult = new CityDto()
+                //{
+                //    Id = cityEntity.Id,
+                //    Name = cityEntity.Name,
+                //    Description = cityEntity.Description
+                //};
 
-                foreach (var p in cityEntity.PointOfInterest)
-                {
-                    cityResult.PointOfInterest.Add(
-                        new PointOfInterestDto()
-                        {
-                            Id = p.Id,
-                            Name = p.Name,
-                            Description = p.Description
-                        });
-                }
+                //foreach (var p in cityEntity.PointOfInterest)
+                //{
+                //    cityResult.PointOfInterest.Add(
+                //        new PointOfInterestDto()
+                //        {
+                //            Id = p.Id,
+                //            Name = p.Name,
+                //            Description = p.Description
+                //        });
+                //}
+
+                var cityResult = _mapper.Map<CityDto>(cityEntity);
 
                 return Ok(cityResult);
             }
             else
             {
-                var cityResult = new CityWithoutPointOfInterestDto()
-                {
-                    Id = cityEntity.Id,
-                    Name = cityEntity.Name,
-                    Description = cityEntity.Description
-                };
+                //var cityResult = new CityWithoutPointOfInterestDto()
+                //{
+                //    Id = cityEntity.Id,
+                //    Name = cityEntity.Name,
+                //    Description = cityEntity.Description
+                //};
+
+                var cityResult = _mapper.Map<CityWithoutPointOfInterestDto>(cityEntity);
 
                 return Ok(cityResult);
             }
