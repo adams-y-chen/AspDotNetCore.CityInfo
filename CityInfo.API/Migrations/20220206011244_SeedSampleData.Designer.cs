@@ -61,7 +61,7 @@ namespace CityInfo.API.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CityInfo.API.Entities.PointOfInterest", b =>
+            modelBuilder.Entity("CityInfo.API.Entities.PointsOfInterest", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -131,10 +131,10 @@ namespace CityInfo.API.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CityInfo.API.Entities.PointOfInterest", b =>
+            modelBuilder.Entity("CityInfo.API.Entities.PointsOfInterest", b =>
                 {
                     b.HasOne("CityInfo.API.Entities.City", "City")
-                        .WithMany("PointOfInterest")
+                        .WithMany("PointsOfInterest")
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

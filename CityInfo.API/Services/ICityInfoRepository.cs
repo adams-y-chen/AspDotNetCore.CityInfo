@@ -20,5 +20,13 @@ namespace CityInfo.API.Services
         PointOfInterest GetPointOfInterestForCity(int cityId, int id);
 
         bool CityExists(int cityId);
+
+        void AddPointOfInterestForCity(int cityId, PointOfInterest pointOfInterest);
+
+        void UpdatePointOfInterestForCity(int cityId, PointOfInterest pointOfInterest);
+
+        void DeletePointOfInterest(PointOfInterest pointOfInterest);
+
+        bool Save();
     }
 }

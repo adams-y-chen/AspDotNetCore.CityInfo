@@ -66,9 +66,9 @@ namespace CityInfo.API.Controllers
                 //    Description = cityEntity.Description
                 //};
 
-                //foreach (var p in cityEntity.PointOfInterest)
+                //foreach (var p in cityEntity.PointsOfInterest)
                 //{
-                //    cityResult.PointOfInterest.Add(
+                //    cityResult.PointsOfInterest.Add(
                 //        new PointOfInterestDto()
                 //        {
                 //            Id = p.Id,

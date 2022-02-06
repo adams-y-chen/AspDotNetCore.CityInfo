@@ -23,11 +23,11 @@ namespace CityInfo.API.Services
             return _context.Cities.OrderBy(c => c.Name).ToList();
         }
 
-        public City GetCity(int cityId, bool includePointsOfInterest)
+        public City GetCity(int cityId, bool includePointsOfInterest = false)
         {
             if (includePointsOfInterest)
             {
-                return _context.Cities.Include(c => c.PointOfInterest)
+                return _context.Cities.Include(c => c.PointsOfInterest)
                     .Where(c => c.Id == cityId).FirstOrDefault();
             }
             else
@@ -52,6 +52,28 @@ namespace CityInfo.API.Services
         public bool CityExists(int cityId)
         {
             return _context.Cities.Any(c => c.Id == cityId);
+        }
+
+        public void AddPointOfInterestForCity(int cityId, PointOfInterest pointOfInterest)
+        {
+            var city = GetCity(cityId);
+            city.PointsOfInterest.Add(pointOfInterest);
+        }
+
+        public void UpdatePointOfInterestForCity(int cityId, PointOfInterest pointOfInterest)
+        {
+            // No op for Entity Framework Core repository.
+            // Entity Framework Core keeps track of entity (returned by GetPointOfInterestForCity) changes. So there is no need to save it back.
+        }
+
+        public void DeletePointOfInterest(PointOfInterest pointOfInterest)
+        {
+            _context.PointsOfInterest.Remove(pointOfInterest);
+        }
+
+        public bool Save()
+        {
+            return (_context.SaveChanges() >= 0);
         }
     }
 }

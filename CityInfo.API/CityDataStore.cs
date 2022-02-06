@@ -21,7 +21,7 @@ namespace CityInfo.API
                     Id = 1,
                     Name = "New York City",
                     Description = "City with central park",
-                    PointOfInterest = new List<PointOfInterestDto>()
+                    PointsOfInterest = new List<PointOfInterestDto>()
                     {
                         new PointOfInterestDto()
                         {

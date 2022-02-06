@@ -40,3 +40,48 @@
 2022-02-06 16:27:07.6668|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
 2022-02-06 16:27:07.6668|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
 2022-02-06 16:27:07.6840|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 16:27:23.9509|0|INFO|CityInfo.API.Controllers.PointOfInterestController|City with Id $4 was not found. |url: http://localhost/api/cities/4/pointsofinterest|action: GetPointsOfInterest|
+2022-02-06 16:44:55.7426|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 16:45:21.4318|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 16:45:21.4491|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 16:45:21.4491|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 16:47:56.6944|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 16:48:16.2589|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 16:48:16.2589|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 16:48:16.2589|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 16:50:54.4551|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 16:51:15.3220|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 16:51:15.3220|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 16:51:15.3220|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 16:55:28.3346|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 16:55:50.8536|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 16:55:50.8536|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 16:55:50.8536|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 17:17:04.1141|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 17:17:30.2464|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 17:17:30.2464|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 17:17:30.2596|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 17:20:04.3079|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 17:20:24.6646|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 17:20:24.6646|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 17:20:24.6646|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 17:26:51.4348|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 17:27:14.7662|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 17:27:14.7761|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 17:27:14.7761|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 17:28:35.3817|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 17:28:57.3686|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 17:28:57.3686|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 17:28:57.3686|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 17:31:10.2464|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 17:31:14.8921|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 17:31:14.9002|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 17:31:14.9002|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 17:31:36.5123|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 17:31:42.0757|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 17:31:42.0910|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 17:31:42.0910|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 17:37:04.0776|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 17:37:08.5021|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 17:37:08.5112|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 17:37:08.5112|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |

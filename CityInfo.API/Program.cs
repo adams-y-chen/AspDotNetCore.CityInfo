@@ -34,8 +34,8 @@ namespace CityInfo.API
                     {
                         var context = scope.ServiceProvider.GetService<CityInfoContext>();
 
-                        // for demo purpose, delete the database and then start the up to do migrate
-                        context.Database.EnsureDeleted();
+                        // for demo purpose, delete the database so the DB is recreated and seeded everytime.
+                        // context.Database.EnsureDeleted();
                         context.Database.Migrate();
 
                     }
