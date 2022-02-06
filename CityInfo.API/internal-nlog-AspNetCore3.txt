@@ -173,3 +173,30 @@ Info Adding target FileTarget(Name=ownFile-web)
 Info Adding target ConsoleTarget(Name=lifetimeConsole)
 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API\bin\Debug\netcoreapp3.1\NLog.config
 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API\bin\Debug\netcoreapp3.1\NLog.config
+Info Message Template Auto Format enabled
+Info Loading assembly: NLog.Web.AspNetCore
+Info Adding target FileTarget(Name=allfile)
+Info Adding target FileTarget(Name=ownFile-web)
+Info Adding target ConsoleTarget(Name=lifetimeConsole)
+Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API\bin\Debug\netcoreapp3.1\NLog.config
+Info Message Template Auto Format enabled
+Info Loading assembly: NLog.Web.AspNetCore
+Info Adding target FileTarget(Name=allfile)
+Info Adding target FileTarget(Name=ownFile-web)
+Info Adding target ConsoleTarget(Name=lifetimeConsole)
+Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API\bin\Debug\netcoreapp3.1\NLog.config
+Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API\bin\Debug\netcoreapp3.1\NLog.config
+Info Message Template Auto Format enabled
+Info Loading assembly: NLog.Web.AspNetCore
+Info Adding target FileTarget(Name=allfile)
+Info Adding target FileTarget(Name=ownFile-web)
+Info Adding target ConsoleTarget(Name=lifetimeConsole)
+Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API\bin\Debug\netcoreapp3.1\NLog.config
+Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API\bin\Debug\netcoreapp3.1\NLog.config
+Info Message Template Auto Format enabled
+Info Loading assembly: NLog.Web.AspNetCore
+Info Adding target FileTarget(Name=allfile)
+Info Adding target FileTarget(Name=ownFile-web)
+Info Adding target ConsoleTarget(Name=lifetimeConsole)
+Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API\bin\Debug\netcoreapp3.1\NLog.config
+Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API\bin\Debug\netcoreapp3.1\NLog.config

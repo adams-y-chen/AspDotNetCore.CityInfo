@@ -52,6 +52,8 @@ namespace CityInfo.API
 #else
             services.AddSingleton<IMailService, CloudMailService>();
 #endif
+            // Instance is created for each HTTP request.
+            services.AddScoped<ICityInfoRepository, CityInfoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

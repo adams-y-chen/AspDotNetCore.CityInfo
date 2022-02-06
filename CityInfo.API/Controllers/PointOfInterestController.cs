@@ -15,15 +15,16 @@ namespace CityInfo.API.Controllers
     {
         private ILogger<PointOfInterestController> _logger;
         private IMailService _mailService;
+        private ICityInfoRepository _cityInfoRepository;
 
         // logger is injected by DI container.
         public PointOfInterestController(ILogger<PointOfInterestController> logger,
-            IMailService mailService)
+            IMailService mailService,
+            ICityInfoRepository cityInfoRepository)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _mailService = mailService;
-
-            _logger.LogInformation($"Test that we injected the logger {logger}");
+            _mailService = mailService ?? throw new ArgumentNullException(nameof(mailService));
+            _cityInfoRepository = cityInfoRepository ?? throw new ArgumentNullException(nameof(cityInfoRepository));
         }
 
         [HttpGet]
@@ -31,19 +32,31 @@ namespace CityInfo.API.Controllers
         {
             try
             {
-                var city = CityDataStore.Current.Cities
-                    .FirstOrDefault(c => c.Id == cityId);
-
-                if (city == null)
+                if (!_cityInfoRepository.CityExists(cityId))
                 {
+                    _logger.LogInformation($"City with Id ${cityId} was not found.");
                     return NotFound();
                 }
 
-                return Ok(city.PointOfInterest);
+                var pointOfInterestEntities = _cityInfoRepository.GetPointsOfInterestForCity(cityId);
+
+                var result = new List<PointOfInterestDto>();
+
+                foreach (var p in pointOfInterestEntities)
+                {
+                    result.Add(new PointOfInterestDto
+                    {
+                        Id = p.Id,
+                        Name = p.Name,
+                        Description = p.Description
+                    });
+                }
+
+                return Ok(result);
             } 
             catch (Exception ex)
             {
-                _logger.LogInformation($"Exception while getting point of interests in city {cityId}", ex);
+                _logger.LogCritical($"Exception while getting point of interests in city {cityId}", ex);
                 // throw;
                 return StatusCode(500, "Internal error while handling your request.");
             }
@@ -52,22 +65,27 @@ namespace CityInfo.API.Controllers
         [HttpGet("{id}", Name = "GetPointOfInterest")]
         public IActionResult GetPointOfInterest(int cityId, int id)
         {
-            var city = CityDataStore.Current.Cities
-                .FirstOrDefault(c => c.Id == cityId);
+            if (!_cityInfoRepository.CityExists(cityId))
+            {
+                _logger.LogInformation($"City with Id ${cityId} was not found.");
+                return NotFound();
+            }
 
-            if (city == null)
+            var pointOfInterestEntity = _cityInfoRepository.GetPointOfInterestForCity(cityId, id);
+
+            if (pointOfInterestEntity == null)
             {
                 return NotFound();
             }
 
-            var point = city.PointOfInterest.FirstOrDefault(p => p.Id == id);
-
-            if (point == null)
+            var result = new PointOfInterestDto()
             {
-                return NotFound();
-            }
+                Id = pointOfInterestEntity.Id,
+                Name = pointOfInterestEntity.Name,
+                Description = pointOfInterestEntity.Description
+            };
 
-            return Ok(point);
+            return Ok(result);
         }
 
         [HttpPost]

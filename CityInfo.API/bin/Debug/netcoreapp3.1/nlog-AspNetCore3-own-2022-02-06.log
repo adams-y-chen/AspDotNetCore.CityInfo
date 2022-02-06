@@ -1,0 +1,22 @@
+2022-02-06 09:48:00.3520|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 09:48:01.5902|0|ERROR|CityInfo.API.Program|Stopped program because of exception System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: CityInfo.API.Services.ICityInfoRepository Lifetime: Scoped ImplementationType: CityInfo.API.Services.CityInfoRepository': A suitable constructor for type 'CityInfo.API.Services.CityInfoRepository' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+ ---> System.InvalidOperationException: A suitable constructor for type 'CityInfo.API.Services.CityInfoRepository' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)|url: |action: |
+2022-02-06 09:48:53.8113|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 09:49:16.3028|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 09:49:16.3174|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 09:49:16.3231|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 10:01:55.3266|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 10:02:17.9217|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 10:02:17.9441|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 10:02:17.9441|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |
+2022-02-06 10:19:07.9847|0|DEBUG|CityInfo.API.Program|init main |url: |action: |
+2022-02-06 10:19:30.0121|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2022-02-06 10:19:30.0305|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2022-02-06 10:19:30.0305|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API |url: |action: |

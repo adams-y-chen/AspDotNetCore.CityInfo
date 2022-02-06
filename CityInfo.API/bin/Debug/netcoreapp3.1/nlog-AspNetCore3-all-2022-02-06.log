@@ -1,0 +1,1483 @@
+2022-02-06 09:48:00.3520|0|DEBUG|CityInfo.API.Program|init main 
+2022-02-06 09:48:01.5902|0|ERROR|CityInfo.API.Program|Stopped program because of exception System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: CityInfo.API.Services.ICityInfoRepository Lifetime: Scoped ImplementationType: CityInfo.API.Services.CityInfoRepository': A suitable constructor for type 'CityInfo.API.Services.CityInfoRepository' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+ ---> System.InvalidOperationException: A suitable constructor for type 'CityInfo.API.Services.CityInfoRepository' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+2022-02-06 09:48:53.8113|0|DEBUG|CityInfo.API.Program|init main 
+2022-02-06 09:48:55.4524|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-02-06 09:48:56.5004|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 3.1.22 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-02-06 09:48:56.6839|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:48:58.1561|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:48:58.1641|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:48:58.1641|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (5ms). 
+2022-02-06 09:48:58.1641|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 09:48:58.2141|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 09:48:58.2141|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:48:58.2141|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:48:58.2695|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:48:59.2862|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:48:59.2862|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:48:59.2862|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:48:59.2862|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END; 
+2022-02-06 09:49:02.3486|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3,060ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END; 
+2022-02-06 09:49:02.3486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:02.3486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:02.3486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoContext]; 
+2022-02-06 09:49:02.4240|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (75ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoContext]; 
+2022-02-06 09:49:02.4240|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:02.4240|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:02.4240|0|DEBUG|Microsoft.EntityFrameworkCore.Migrations|Migrating using database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:02.4240|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:14.4819|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:14.4819|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:14.4819|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:14.4819|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:14.4819|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:14.4819|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:14.4819|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:14.4819|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoContext]; 
+2022-02-06 09:49:14.6486|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (161ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoContext]; 
+2022-02-06 09:49:14.6486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:14.6486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:14.6486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2022-02-06 09:49:14.6838|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2022-02-06 09:49:14.6838|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:14.6838|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:14.6838|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.7342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.7342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.7342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.7342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 09:49:15.7342|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 09:49:15.7342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.7342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8150|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'CityInfoContext'. 
+2022-02-06 09:49:15.8150|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'CityInfoContext'. 
+2022-02-06 09:49:15.8263|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.8263|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.8263|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8263|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8263|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+2022-02-06 09:49:15.8363|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 09:49:15.8363|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms). 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8363|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2022-02-06 09:49:15.8579|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2022-02-06 09:49:15.8579|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8579|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8791|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220206000036_CityInfoDbInitialMigration'. 
+2022-02-06 09:49:15.8944|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8944|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.8944|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Cities] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(200) NULL,
+    CONSTRAINT [PK_Cities] PRIMARY KEY ([Id])
+); 
+2022-02-06 09:49:15.9010|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Cities] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(200) NULL,
+    CONSTRAINT [PK_Cities] PRIMARY KEY ([Id])
+); 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [PointsOfInterest] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [CityId] int NOT NULL,
+    CONSTRAINT [PK_PointsOfInterest] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_PointsOfInterest_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [Cities] ([Id]) ON DELETE CASCADE
+); 
+2022-02-06 09:49:15.9010|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [PointsOfInterest] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [CityId] int NOT NULL,
+    CONSTRAINT [PK_PointsOfInterest] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_PointsOfInterest_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [Cities] ([Id]) ON DELETE CASCADE
+); 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_PointsOfInterest_CityId] ON [PointsOfInterest] ([CityId]); 
+2022-02-06 09:49:15.9010|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_PointsOfInterest_CityId] ON [PointsOfInterest] ([CityId]); 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9010|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206000036_CityInfoDbInitialMigration', N'3.1.22'); 
+2022-02-06 09:49:15.9010|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206000036_CityInfoDbInitialMigration', N'3.1.22'); 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9147|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220206001907_CityInfoDbAddPointOfInterestDescription'. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [PointsOfInterest] ADD [Description] nvarchar(200) NULL; 
+2022-02-06 09:49:15.9147|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [PointsOfInterest] ADD [Description] nvarchar(200) NULL; 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206001907_CityInfoDbAddPointOfInterestDescription', N'3.1.22'); 
+2022-02-06 09:49:15.9147|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206001907_CityInfoDbAddPointOfInterestDescription', N'3.1.22'); 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9147|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9147|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220206011244_SeedSampleData'. 
+2022-02-06 09:49:15.9371|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9371|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9371|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-02-06 09:49:15.9371|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-02-06 09:49:15.9371|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9371|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9371|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (1, N'The one with that big park.', N'New York City');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 09:49:15.9737|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (1, N'The one with that big park.', N'New York City');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 09:49:15.9737|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9737|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9737|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (2, N'The one with the cathedral that was never really finished.', N'Antwerp');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 09:49:15.9789|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (2, N'The one with the cathedral that was never really finished.', N'Antwerp');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 09:49:15.9789|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9789|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9789|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (3, N'The one with that big tower.', N'Paris');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 09:49:15.9789|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (3, N'The one with that big tower.', N'Paris');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 09:49:15.9789|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9789|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9789|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] ON;
+INSERT INTO [PointsOfInterest] ([Id], [CityId], [Description], [Name])
+VALUES (1, 1, N'The most visited urban park in the United States.', N'Central Park'),
+(2, 1, N'A 102-story skyscraper located in Midtown Manhattan.', N'Empire State Building'),
+(3, 2, N'A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.', N'Cathedral'),
+(4, 2, N'The the finest example of railway architecture in Belgium.', N'Antwerp Central Station'),
+(5, 3, N'A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.', N'Eiffel Tower'),
+(6, 3, N'The world''s largest museum.', N'The Louvre');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] OFF; 
+2022-02-06 09:49:15.9931|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] ON;
+INSERT INTO [PointsOfInterest] ([Id], [CityId], [Description], [Name])
+VALUES (1, 1, N'The most visited urban park in the United States.', N'Central Park'),
+(2, 1, N'A 102-story skyscraper located in Midtown Manhattan.', N'Empire State Building'),
+(3, 2, N'A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.', N'Cathedral'),
+(4, 2, N'The the finest example of railway architecture in Belgium.', N'Antwerp Central Station'),
+(5, 3, N'A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.', N'Eiffel Tower'),
+(6, 3, N'The world''s largest museum.', N'The Louvre');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] OFF; 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206011244_SeedSampleData', N'3.1.22'); 
+2022-02-06 09:49:15.9931|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206011244_SeedSampleData', N'3.1.22'); 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'CityInfoContext' disposed. 
+2022-02-06 09:49:15.9931|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-02-06 09:49:16.3028|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly CityInfo.API 
+2022-02-06 09:49:16.3028|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-06 09:49:16.3174|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-06 09:49:16.3231|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API 
+2022-02-06 09:49:16.3231|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-02-06 09:49:16.3551|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:1028/   
+2022-02-06 09:49:16.3551|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:1028/api/cities   
+2022-02-06 09:49:16.3551|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-02-06 09:49:16.3551|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-02-06 09:49:16.3551|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-02-06 09:49:16.3551|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-02-06 09:49:16.3800|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/' 
+2022-02-06 09:49:16.3800|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-02-06 09:49:16.3800|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/cities' 
+2022-02-06 09:49:16.3850|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API)' with route pattern 'api/Cities' is valid for the request path '/api/cities' 
+2022-02-06 09:49:16.3850|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API)' 
+2022-02-06 09:49:16.3850|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API)' 
+2022-02-06 09:49:16.3992|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2022-02-06 09:49:16.3992|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 48.8477ms 404  
+2022-02-06 09:49:16.4284|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API). 
+2022-02-06 09:49:16.4284|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-02-06 09:49:16.4284|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-02-06 09:49:16.4301|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-02-06 09:49:16.4301|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-02-06 09:49:16.4301|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-02-06 09:49:16.4301|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API) 
+2022-02-06 09:49:16.4301|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API) 
+2022-02-06 09:49:16.4301|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 09:49:16.4301|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 09:49:16.4301|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 09:49:16.4301|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 09:49:16.4301|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid 
+2022-02-06 09:49:16.4859|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 3.1.22 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-02-06 09:49:16.6758|0|DEBUG|Microsoft.EntityFrameworkCore.Query|queryContext => new QueryingEnumerable<City>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, City>, 
+    CityInfo.API.Contexts.CityInfoContext, 
+    null
+) 
+2022-02-06 09:49:16.6930|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 09:49:16.6930|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 09:49:16.6930|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:16.6930|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:16.6930|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+ORDER BY [c].[Name] 
+2022-02-06 09:49:16.6930|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+ORDER BY [c].[Name] 
+2022-02-06 09:49:16.7019|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'City' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 09:49:16.7190|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'City' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 09:49:16.7190|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'City' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 09:49:16.7190|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 09:49:16.7190|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:16.7190|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 09:49:16.7190|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 281.8597ms. 
+2022-02-06 09:49:16.7190|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 09:49:16.7190|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 09:49:16.7190|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 09:49:16.7190|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 09:49:16.7190|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 09:49:16.7190|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 09:49:16.7190|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 09:49:16.7190|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter 
+2022-02-06 09:49:16.7312|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-02-06 09:49:16.7312|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-02-06 09:49:16.7312|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-02-06 09:49:16.7312|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-02-06 09:49:16.7312|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CityInfo.API.Models.CityWithoutPointOfInterestDto, CityInfo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2022-02-06 09:49:16.8647|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 09:49:16.8647|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 09:49:16.8647|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 09:49:16.8679|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) in 434.354ms 
+2022-02-06 09:49:16.8679|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API)' 
+2022-02-06 09:49:16.8679|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'CityInfoContext' disposed. 
+2022-02-06 09:49:16.8679|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 520.1234ms 200 application/json; charset=utf-8 
+2022-02-06 10:01:55.3266|0|DEBUG|CityInfo.API.Program|init main 
+2022-02-06 10:01:56.8143|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-02-06 10:01:57.8770|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 3.1.22 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-02-06 10:01:58.1886|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:01:59.8774|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:01:59.8851|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:01:59.8851|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (5ms). 
+2022-02-06 10:01:59.8851|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:01:59.9196|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:01:59.9196|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:01:59.9196|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:01:59.9711|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:00.9950|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:00.9950|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:00.9950|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:00.9950|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END; 
+2022-02-06 10:02:04.0083|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3,011ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END; 
+2022-02-06 10:02:04.0083|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:04.0083|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:04.0083|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoContext]; 
+2022-02-06 10:02:04.0307|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoContext]; 
+2022-02-06 10:02:04.0307|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:04.0307|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:04.0307|0|DEBUG|Microsoft.EntityFrameworkCore.Migrations|Migrating using database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:04.0307|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:16.0974|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:16.1028|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:16.1028|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:16.1028|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:16.1028|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:16.1028|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:16.1028|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:16.1028|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoContext]; 
+2022-02-06 10:02:16.2525|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (145ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoContext]; 
+2022-02-06 10:02:16.2525|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:16.2525|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:16.2525|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2022-02-06 10:02:16.3016|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (49ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2022-02-06 10:02:16.3016|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:16.3016|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:16.3016|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.3486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.3486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.3486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.3486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:02:17.3486|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:02:17.3486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.3486|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4375|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'CityInfoContext'. 
+2022-02-06 10:02:17.4375|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'CityInfoContext'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+2022-02-06 10:02:17.4479|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:02:17.4479|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms). 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4479|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2022-02-06 10:02:17.4762|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2022-02-06 10:02:17.4762|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4769|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4769|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 10:02:17.4769|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 10:02:17.4769|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4769|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4769|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2022-02-06 10:02:17.4769|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2022-02-06 10:02:17.4769|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 10:02:17.4769|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4769|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.4962|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220206000036_CityInfoDbInitialMigration'. 
+2022-02-06 10:02:17.5133|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5133|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5133|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-02-06 10:02:17.5133|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-02-06 10:02:17.5133|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5133|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5133|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Cities] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(200) NULL,
+    CONSTRAINT [PK_Cities] PRIMARY KEY ([Id])
+); 
+2022-02-06 10:02:17.5232|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Cities] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(200) NULL,
+    CONSTRAINT [PK_Cities] PRIMARY KEY ([Id])
+); 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [PointsOfInterest] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [CityId] int NOT NULL,
+    CONSTRAINT [PK_PointsOfInterest] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_PointsOfInterest_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [Cities] ([Id]) ON DELETE CASCADE
+); 
+2022-02-06 10:02:17.5232|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [PointsOfInterest] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [CityId] int NOT NULL,
+    CONSTRAINT [PK_PointsOfInterest] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_PointsOfInterest_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [Cities] ([Id]) ON DELETE CASCADE
+); 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_PointsOfInterest_CityId] ON [PointsOfInterest] ([CityId]); 
+2022-02-06 10:02:17.5232|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_PointsOfInterest_CityId] ON [PointsOfInterest] ([CityId]); 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206000036_CityInfoDbInitialMigration', N'3.1.22'); 
+2022-02-06 10:02:17.5232|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206000036_CityInfoDbInitialMigration', N'3.1.22'); 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5232|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220206001907_CityInfoDbAddPointOfInterestDescription'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [PointsOfInterest] ADD [Description] nvarchar(200) NULL; 
+2022-02-06 10:02:17.5232|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [PointsOfInterest] ADD [Description] nvarchar(200) NULL; 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5232|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206001907_CityInfoDbAddPointOfInterestDescription', N'3.1.22'); 
+2022-02-06 10:02:17.5395|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206001907_CityInfoDbAddPointOfInterestDescription', N'3.1.22'); 
+2022-02-06 10:02:17.5395|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:02:17.5395|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:02:17.5395|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-02-06 10:02:17.5395|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5395|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5395|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220206011244_SeedSampleData'. 
+2022-02-06 10:02:17.5585|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5585|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.5585|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-02-06 10:02:17.5585|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-02-06 10:02:17.5585|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5585|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5585|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (1, N'The one with that big park.', N'New York City');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:02:17.5808|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (1, N'The one with that big park.', N'New York City');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:02:17.5808|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5808|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5808|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (2, N'The one with the cathedral that was never really finished.', N'Antwerp');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:02:17.5878|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (2, N'The one with the cathedral that was never really finished.', N'Antwerp');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:02:17.5878|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5878|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5878|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (3, N'The one with that big tower.', N'Paris');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:02:17.5878|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (3, N'The one with that big tower.', N'Paris');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:02:17.5878|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.5878|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.5878|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] ON;
+INSERT INTO [PointsOfInterest] ([Id], [CityId], [Description], [Name])
+VALUES (1, 1, N'The most visited urban park in the United States.', N'Central Park'),
+(2, 1, N'A 102-story skyscraper located in Midtown Manhattan.', N'Empire State Building'),
+(3, 2, N'A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.', N'Cathedral'),
+(4, 2, N'The the finest example of railway architecture in Belgium.', N'Antwerp Central Station'),
+(5, 3, N'A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.', N'Eiffel Tower'),
+(6, 3, N'The world''s largest museum.', N'The Louvre');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] OFF; 
+2022-02-06 10:02:17.6020|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] ON;
+INSERT INTO [PointsOfInterest] ([Id], [CityId], [Description], [Name])
+VALUES (1, 1, N'The most visited urban park in the United States.', N'Central Park'),
+(2, 1, N'A 102-story skyscraper located in Midtown Manhattan.', N'Empire State Building'),
+(3, 2, N'A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.', N'Cathedral'),
+(4, 2, N'The the finest example of railway architecture in Belgium.', N'Antwerp Central Station'),
+(5, 3, N'A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.', N'Eiffel Tower'),
+(6, 3, N'The world''s largest museum.', N'The Louvre');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] OFF; 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206011244_SeedSampleData', N'3.1.22'); 
+2022-02-06 10:02:17.6020|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206011244_SeedSampleData', N'3.1.22'); 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'CityInfoContext' disposed. 
+2022-02-06 10:02:17.6020|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-02-06 10:02:17.9111|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly CityInfo.API 
+2022-02-06 10:02:17.9217|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-06 10:02:17.9441|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-06 10:02:17.9441|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API 
+2022-02-06 10:02:17.9441|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-02-06 10:02:17.9628|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:1028/   
+2022-02-06 10:02:17.9628|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1   
+2022-02-06 10:02:17.9628|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-02-06 10:02:17.9628|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-02-06 10:02:17.9628|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-02-06 10:02:17.9628|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-02-06 10:02:17.9882|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/' 
+2022-02-06 10:02:17.9882|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-02-06 10:02:17.9882|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/cities/1' 
+2022-02-06 10:02:17.9946|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' with route pattern 'api/Cities/{id}' is valid for the request path '/api/cities/1' 
+2022-02-06 10:02:18.0117|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' 
+2022-02-06 10:02:18.0117|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' 
+2022-02-06 10:02:18.0334|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 71.1111ms 404  
+2022-02-06 10:02:18.0334|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2022-02-06 10:02:18.0989|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetCity", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCity(Int32, Boolean) on controller CityInfo.API.Controllers.CitiesController (CityInfo.API). 
+2022-02-06 10:02:18.0989|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-02-06 10:02:18.0989|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-02-06 10:02:18.0989|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-02-06 10:02:18.0989|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-02-06 10:02:18.0989|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-02-06 10:02:18.1027|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API) 
+2022-02-06 10:02:18.1027|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API) 
+2022-02-06 10:02:18.1027|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean' ... 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name '' for binding parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'includePointsOfInterest' of type 'System.Boolean' ... 
+2022-02-06 10:02:18.1225|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:02:18.1225|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:02:18.1225|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:02:18.1225|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:02:18.1225|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:02:18.1389|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) - Validation state: Valid 
+2022-02-06 10:02:18.1389|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) with arguments (1, False) 
+2022-02-06 10:02:18.1617|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 3.1.22 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-02-06 10:02:18.4651|0|DEBUG|Microsoft.EntityFrameworkCore.Query|queryContext => new QueryingEnumerable<City>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, City>, 
+    CityInfo.API.Contexts.CityInfoContext, 
+    null
+)
+    .SingleOrDefault() 
+2022-02-06 10:02:18.4987|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 10:02:18.4987|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 10:02:18.4987|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:18.4987|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:18.5137|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+WHERE [c].[Id] = @__cityId_0 
+2022-02-06 10:02:18.5614|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (54ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+WHERE [c].[Id] = @__cityId_0 
+2022-02-06 10:02:18.5754|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'City' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:02:18.6009|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 10:02:18.6009|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:18.6009|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:18.6057|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 462.3158ms. 
+2022-02-06 10:02:18.6057|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:02:18.6057|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:02:18.6057|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:02:18.6057|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:02:18.6057|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:02:18.6057|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:02:18.6057|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:02:18.6057|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter 
+2022-02-06 10:02:18.6057|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-02-06 10:02:18.6057|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-02-06 10:02:18.6057|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-02-06 10:02:18.6057|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-02-06 10:02:18.6057|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CityInfo.API.Models.CityWithoutPointOfInterestDto'. 
+2022-02-06 10:02:18.7900|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:02:18.7900|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:02:18.7900|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:02:18.7900|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) in 688.9281ms 
+2022-02-06 10:02:18.7900|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' 
+2022-02-06 10:02:18.7900|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'CityInfoContext' disposed. 
+2022-02-06 10:02:18.7900|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 841.4712ms 200 application/json; charset=utf-8 
+2022-02-06 10:02:34.8257|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1?includepointsofinterest=true   
+2022-02-06 10:02:34.8257|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/cities/1' 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' with route pattern 'api/Cities/{id}' is valid for the request path '/api/cities/1' 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' 
+2022-02-06 10:02:34.8257|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' 
+2022-02-06 10:02:34.8257|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetCity", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCity(Int32, Boolean) on controller CityInfo.API.Controllers.CitiesController (CityInfo.API). 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API) 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API) 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean' ... 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean' using the name 'includePointsOfInterest' in request data ... 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'includePointsOfInterest' of type 'System.Boolean' ... 
+2022-02-06 10:02:34.8257|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:02:34.8257|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:02:34.8257|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:02:34.8257|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:02:34.8257|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:02:34.8257|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) - Validation state: Valid 
+2022-02-06 10:02:34.8257|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) with arguments (1, True) 
+2022-02-06 10:02:34.8563|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 3.1.22 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-02-06 10:02:34.9014|0|DEBUG|Microsoft.EntityFrameworkCore.Query|queryContext => new QueryingEnumerable<City>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, City>, 
+    CityInfo.API.Contexts.CityInfoContext, 
+    null
+)
+    .SingleOrDefault() 
+2022-02-06 10:02:34.9014|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 10:02:34.9014|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 10:02:34.9014|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:34.9014|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:34.9014|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[Name], [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name]
+    FROM [Cities] AS [c]
+    WHERE [c].[Id] = @__cityId_0
+) AS [t]
+LEFT JOIN [PointsOfInterest] AS [p] ON [t].[Id] = [p].[CityId]
+ORDER BY [t].[Id], [p].[Id] 
+2022-02-06 10:02:34.9014|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[Name], [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name]
+    FROM [Cities] AS [c]
+    WHERE [c].[Id] = @__cityId_0
+) AS [t]
+LEFT JOIN [PointsOfInterest] AS [p] ON [t].[Id] = [p].[CityId]
+ORDER BY [t].[Id], [p].[Id] 
+2022-02-06 10:02:34.9014|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'City' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:02:34.9014|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'PointOfInterest' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'PointOfInterest' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:02:34.9175|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 86.6344ms. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-02-06 10:02:34.9175|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CityInfo.API.Models.CityDto'. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:02:34.9175|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:02:34.9175|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) in 99.7821ms 
+2022-02-06 10:02:34.9175|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' 
+2022-02-06 10:02:34.9175|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'CityInfoContext' disposed. 
+2022-02-06 10:02:34.9175|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 102.6104ms 200 application/json; charset=utf-8 
+2022-02-06 10:19:07.9847|0|DEBUG|CityInfo.API.Program|init main 
+2022-02-06 10:19:09.7710|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-02-06 10:19:10.5224|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 3.1.22 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-02-06 10:19:10.6771|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:12.0931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:12.0931|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:12.1045|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (5ms). 
+2022-02-06 10:19:12.1045|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:19:12.1267|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:19:12.1267|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:12.1267|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:12.1696|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:13.1775|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:13.1775|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:13.1775|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:13.1775|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END; 
+2022-02-06 10:19:16.1995|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3,021ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END; 
+2022-02-06 10:19:16.1995|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:16.1995|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:16.1995|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoContext]; 
+2022-02-06 10:19:16.2136|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoContext]; 
+2022-02-06 10:19:16.2136|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:16.2136|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:16.2136|0|DEBUG|Microsoft.EntityFrameworkCore.Migrations|Migrating using database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:16.2136|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:28.2790|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:28.2790|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:28.2790|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:28.2790|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:28.2790|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:28.2790|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:28.2790|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:28.2790|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoContext]; 
+2022-02-06 10:19:28.4142|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (128ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoContext]; 
+2022-02-06 10:19:28.4142|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:28.4142|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:28.4142|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2022-02-06 10:19:28.4517|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoContext] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2022-02-06 10:19:28.4517|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:28.4517|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'master' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:28.4517|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.5257|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.5257|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.5257|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.5257|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:19:29.5257|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:19:29.5257|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.5257|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.5913|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'CityInfoContext'. 
+2022-02-06 10:19:29.5913|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'CityInfoContext'. 
+2022-02-06 10:19:29.5913|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.5913|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.5913|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.5913|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.5913|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+2022-02-06 10:19:29.6155|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+2022-02-06 10:19:29.6155|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6155|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6155|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6155|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6155|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.6155|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.6155|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:19:29.6155|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-02-06 10:19:29.6155|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6155|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6185|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'. 
+2022-02-06 10:19:29.6185|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms). 
+2022-02-06 10:19:29.6185|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6185|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6185|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2022-02-06 10:19:29.6329|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2022-02-06 10:19:29.6329|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6329|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6500|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220206000036_CityInfoDbInitialMigration'. 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Cities] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(200) NULL,
+    CONSTRAINT [PK_Cities] PRIMARY KEY ([Id])
+); 
+2022-02-06 10:19:29.6664|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Cities] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(200) NULL,
+    CONSTRAINT [PK_Cities] PRIMARY KEY ([Id])
+); 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [PointsOfInterest] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [CityId] int NOT NULL,
+    CONSTRAINT [PK_PointsOfInterest] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_PointsOfInterest_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [Cities] ([Id]) ON DELETE CASCADE
+); 
+2022-02-06 10:19:29.6664|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [PointsOfInterest] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [CityId] int NOT NULL,
+    CONSTRAINT [PK_PointsOfInterest] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_PointsOfInterest_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [Cities] ([Id]) ON DELETE CASCADE
+); 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_PointsOfInterest_CityId] ON [PointsOfInterest] ([CityId]); 
+2022-02-06 10:19:29.6664|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_PointsOfInterest_CityId] ON [PointsOfInterest] ([CityId]); 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206000036_CityInfoDbInitialMigration', N'3.1.22'); 
+2022-02-06 10:19:29.6664|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206000036_CityInfoDbInitialMigration', N'3.1.22'); 
+2022-02-06 10:19:29.6664|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6807|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220206001907_CityInfoDbAddPointOfInterestDescription'. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [PointsOfInterest] ADD [Description] nvarchar(200) NULL; 
+2022-02-06 10:19:29.6807|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [PointsOfInterest] ADD [Description] nvarchar(200) NULL; 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206001907_CityInfoDbAddPointOfInterestDescription', N'3.1.22'); 
+2022-02-06 10:19:29.6807|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206001907_CityInfoDbAddPointOfInterestDescription', N'3.1.22'); 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6807|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.6807|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220206011244_SeedSampleData'. 
+2022-02-06 10:19:29.7007|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.7007|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.7007|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-02-06 10:19:29.7007|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-02-06 10:19:29.7007|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.7007|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.7007|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (1, N'The one with that big park.', N'New York City');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:19:29.7236|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (1, N'The one with that big park.', N'New York City');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:19:29.7236|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.7236|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.7236|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (2, N'The one with the cathedral that was never really finished.', N'Antwerp');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:19:29.7288|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (2, N'The one with the cathedral that was never really finished.', N'Antwerp');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (3, N'The one with that big tower.', N'Paris');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:19:29.7288|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (3, N'The one with that big tower.', N'Paris');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF; 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] ON;
+INSERT INTO [PointsOfInterest] ([Id], [CityId], [Description], [Name])
+VALUES (1, 1, N'The most visited urban park in the United States.', N'Central Park'),
+(2, 1, N'A 102-story skyscraper located in Midtown Manhattan.', N'Empire State Building'),
+(3, 2, N'A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.', N'Cathedral'),
+(4, 2, N'The the finest example of railway architecture in Belgium.', N'Antwerp Central Station'),
+(5, 3, N'A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.', N'Eiffel Tower'),
+(6, 3, N'The world''s largest museum.', N'The Louvre');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] OFF; 
+2022-02-06 10:19:29.7288|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] ON;
+INSERT INTO [PointsOfInterest] ([Id], [CityId], [Description], [Name])
+VALUES (1, 1, N'The most visited urban park in the United States.', N'Central Park'),
+(2, 1, N'A 102-story skyscraper located in Midtown Manhattan.', N'Empire State Building'),
+(3, 2, N'A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.', N'Cathedral'),
+(4, 2, N'The the finest example of railway architecture in Belgium.', N'Antwerp Central Station'),
+(5, 3, N'A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.', N'Eiffel Tower'),
+(6, 3, N'The world''s largest museum.', N'The Louvre');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] OFF; 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206011244_SeedSampleData', N'3.1.22'); 
+2022-02-06 10:19:29.7288|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220206011244_SeedSampleData', N'3.1.22'); 
+2022-02-06 10:19:29.7288|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:19:29.7422|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-02-06 10:19:29.7422|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-02-06 10:19:29.7422|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.7422|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:19:29.7422|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'CityInfoContext' disposed. 
+2022-02-06 10:19:29.7422|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-02-06 10:19:30.0121|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly CityInfo.API 
+2022-02-06 10:19:30.0121|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-06 10:19:30.0305|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-06 10:19:30.0305|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\YUHECHEN\AspNetCore\CityInfo\CityInfo.API 
+2022-02-06 10:19:30.0305|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-02-06 10:19:30.0463|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:1028/   
+2022-02-06 10:19:30.0463|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-02-06 10:19:30.0463|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-02-06 10:19:30.0646|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/' 
+2022-02-06 10:19:30.0646|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-02-06 10:19:30.0797|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 34.9807ms 404  
+2022-02-06 10:20:04.9771|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1?includepointsofinterest=true   
+2022-02-06 10:20:04.9771|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-02-06 10:20:04.9771|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/cities/1' 
+2022-02-06 10:20:04.9771|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' with route pattern 'api/Cities/{id}' is valid for the request path '/api/cities/1' 
+2022-02-06 10:20:04.9771|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' 
+2022-02-06 10:20:04.9771|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' 
+2022-02-06 10:20:04.9771|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2022-02-06 10:20:05.0144|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetCity", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCity(Int32, Boolean) on controller CityInfo.API.Controllers.CitiesController (CityInfo.API). 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API) 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API) 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-02-06 10:20:05.0144|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:20:05.0240|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean' ... 
+2022-02-06 10:20:05.0240|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean' using the name 'includePointsOfInterest' in request data ... 
+2022-02-06 10:20:05.0240|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:20:05.0240|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:20:05.0240|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'includePointsOfInterest' of type 'System.Boolean' ... 
+2022-02-06 10:20:05.0240|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'includePointsOfInterest' of type 'System.Boolean'. 
+2022-02-06 10:20:05.0240|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:05.0240|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:05.0240|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:20:05.0240|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:20:05.0240|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) - Validation state: Valid 
+2022-02-06 10:20:05.0240|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) with arguments (1, True) 
+2022-02-06 10:20:05.0408|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 3.1.22 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-02-06 10:20:05.2424|0|DEBUG|Microsoft.EntityFrameworkCore.Query|queryContext => new QueryingEnumerable<City>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, City>, 
+    CityInfo.API.Contexts.CityInfoContext, 
+    null
+)
+    .SingleOrDefault() 
+2022-02-06 10:20:05.2656|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 10:20:05.2656|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 10:20:05.2656|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:05.2656|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:05.2736|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[Name], [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name]
+    FROM [Cities] AS [c]
+    WHERE [c].[Id] = @__cityId_0
+) AS [t]
+LEFT JOIN [PointsOfInterest] AS [p] ON [t].[Id] = [p].[CityId]
+ORDER BY [t].[Id], [p].[Id] 
+2022-02-06 10:20:05.3029|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (33ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[Name], [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name]
+    FROM [Cities] AS [c]
+    WHERE [c].[Id] = @__cityId_0
+) AS [t]
+LEFT JOIN [PointsOfInterest] AS [p] ON [t].[Id] = [p].[CityId]
+ORDER BY [t].[Id], [p].[Id] 
+2022-02-06 10:20:05.3118|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'City' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:20:05.3279|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'PointOfInterest' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:20:05.3279|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'PointOfInterest' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:20:05.3374|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 10:20:05.3374|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:05.3374|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:05.3374|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 309.8914ms. 
+2022-02-06 10:20:05.3374|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:20:05.3374|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-02-06 10:20:05.3374|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:05.3374|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:05.3374|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:20:05.3374|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:20:05.3374|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:20:05.3374|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter 
+2022-02-06 10:20:05.3374|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-02-06 10:20:05.3374|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-02-06 10:20:05.3374|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-02-06 10:20:05.3374|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-02-06 10:20:05.3374|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CityInfo.API.Models.CityDto'. 
+2022-02-06 10:20:05.4533|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:20:05.4533|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:20:05.4533|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-02-06 10:20:05.4533|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) in 438.2762ms 
+2022-02-06 10:20:05.4533|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API)' 
+2022-02-06 10:20:05.4533|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'CityInfoContext' disposed. 
+2022-02-06 10:20:05.4533|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 482.0251ms 200 application/json; charset=utf-8 
+2022-02-06 10:20:12.6472|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1/pointsofinterest/1   
+2022-02-06 10:20:12.6472|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-02-06 10:20:12.6472|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/cities/1/pointsofinterest/1' 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'CityInfo.API.Controllers.PointOfInterestController.GetPointOfInterest (CityInfo.API)' with route pattern 'api/cities/{cityId}/pointsofinterest/{id}' is valid for the request path '/api/cities/1/pointsofinterest/1' 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'CityInfo.API.Controllers.PointOfInterestController.GetPointOfInterest (CityInfo.API)' 
+2022-02-06 10:20:12.6485|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CityInfo.API.Controllers.PointOfInterestController.GetPointOfInterest (CityInfo.API)' 
+2022-02-06 10:20:12.6485|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetPointOfInterest", controller = "PointOfInterest"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPointOfInterest(Int32, Int32) on controller CityInfo.API.Controllers.PointOfInterestController (CityInfo.API). 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): None 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller CityInfo.API.Controllers.PointOfInterestController (CityInfo.API) 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller CityInfo.API.Controllers.PointOfInterestController (CityInfo.API) 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'cityId' of type 'System.Int32' ... 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'cityId' of type 'System.Int32' using the name 'cityId' in request data ... 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'cityId' of type 'System.Int32'. 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'cityId' of type 'System.Int32'. 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'cityId' of type 'System.Int32' ... 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'cityId' of type 'System.Int32'. 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-02-06 10:20:12.6485|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-02-06 10:20:12.6485|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:12.6485|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:12.6485|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointOfInterestController.GetPointOfInterest (CityInfo.API) - Validation state: Valid 
+2022-02-06 10:20:12.6485|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointOfInterestController.GetPointOfInterest (CityInfo.API) with arguments (1, 1) 
+2022-02-06 10:20:12.6856|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 3.1.22 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-02-06 10:20:12.6856|0|DEBUG|Microsoft.EntityFrameworkCore.Query|queryContext => new QueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, bool>, 
+    CityInfo.API.Contexts.CityInfoContext, 
+    null
+)
+    .Single() 
+2022-02-06 10:20:12.6856|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-02-06 10:20:12.6951|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Query|queryContext => new QueryingEnumerable<PointOfInterest>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, PointOfInterest>, 
+    CityInfo.API.Contexts.CityInfoContext, 
+    null
+)
+    .SingleOrDefault() 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__cityId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM [PointsOfInterest] AS [p]
+WHERE ([p].[CityId] = @__cityId_0) AND ([p].[Id] = @__id_1) 
+2022-02-06 10:20:12.6951|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__cityId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM [PointsOfInterest] AS [p]
+WHERE ([p].[CityId] = @__cityId_0) AND ([p].[Id] = @__id_1) 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'PointOfInterest' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:12.6951|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method CityInfo.API.Controllers.PointOfInterestController.GetPointOfInterest (CityInfo.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 46.2083ms. 
+2022-02-06 10:20:12.6951|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:12.6951|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:12.6951|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-02-06 10:20:12.6951|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CityInfo.API.Models.PointOfInterestDto'. 
+2022-02-06 10:20:12.6951|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:20:12.6951|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action CityInfo.API.Controllers.PointOfInterestController.GetPointOfInterest (CityInfo.API) in 49.6996ms 
+2022-02-06 10:20:12.6951|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CityInfo.API.Controllers.PointOfInterestController.GetPointOfInterest (CityInfo.API)' 
+2022-02-06 10:20:12.6951|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'CityInfoContext' disposed. 
+2022-02-06 10:20:12.6951|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 59.6252ms 200 application/json; charset=utf-8 
+2022-02-06 10:20:30.6222|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1/pointsofinterest   
+2022-02-06 10:20:30.6222|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/cities/1/pointsofinterest' 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'CityInfo.API.Controllers.PointOfInterestController.GetPointsOfInterest (CityInfo.API)' with route pattern 'api/cities/{cityId}/pointsofinterest' is valid for the request path '/api/cities/1/pointsofinterest' 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'CityInfo.API.Controllers.PointOfInterestController.GetPointsOfInterest (CityInfo.API)' 
+2022-02-06 10:20:30.6222|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CityInfo.API.Controllers.PointOfInterestController.GetPointsOfInterest (CityInfo.API)' 
+2022-02-06 10:20:30.6222|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetPointsOfInterest", controller = "PointOfInterest"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPointsOfInterest(Int32) on controller CityInfo.API.Controllers.PointOfInterestController (CityInfo.API). 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): None 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller CityInfo.API.Controllers.PointOfInterestController (CityInfo.API) 
+2022-02-06 10:20:30.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller CityInfo.API.Controllers.PointOfInterestController (CityInfo.API) 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'cityId' of type 'System.Int32' ... 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'cityId' of type 'System.Int32' using the name 'cityId' in request data ... 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'cityId' of type 'System.Int32'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'cityId' of type 'System.Int32'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'cityId' of type 'System.Int32' ... 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'cityId' of type 'System.Int32'. 
+2022-02-06 10:20:30.6335|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:30.6335|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:30.6335|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointOfInterestController.GetPointsOfInterest (CityInfo.API) - Validation state: Valid 
+2022-02-06 10:20:30.6335|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointOfInterestController.GetPointsOfInterest (CityInfo.API) with arguments (1) 
+2022-02-06 10:20:30.6335|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 3.1.22 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-02-06 10:20:30.6335|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Query|queryContext => new QueryingEnumerable<PointOfInterest>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, PointOfInterest>, 
+    CityInfo.API.Contexts.CityInfoContext, 
+    null
+) 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM [PointsOfInterest] AS [p]
+WHERE [p].[CityId] = @__cityId_0 
+2022-02-06 10:20:30.6335|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM [PointsOfInterest] AS [p]
+WHERE [p].[CityId] = @__cityId_0 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'PointOfInterest' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'CityInfoContext' started tracking 'PointOfInterest' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'CityInfoContext' on server '(localdb)\MSSQLLocalDB'. 
+2022-02-06 10:20:30.6335|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method CityInfo.API.Controllers.PointOfInterestController.GetPointsOfInterest (CityInfo.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13.2103ms. 
+2022-02-06 10:20:30.6335|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:30.6335|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-02-06 10:20:30.6335|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-02-06 10:20:30.6335|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-02-06 10:20:30.6335|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CityInfo.API.Models.PointOfInterestDto, CityInfo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2022-02-06 10:20:30.6487|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-02-06 10:20:30.6487|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action CityInfo.API.Controllers.PointOfInterestController.GetPointsOfInterest (CityInfo.API) in 17.6752ms 
+2022-02-06 10:20:30.6487|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CityInfo.API.Controllers.PointOfInterestController.GetPointsOfInterest (CityInfo.API)' 
+2022-02-06 10:20:30.6487|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'CityInfoContext' disposed. 
+2022-02-06 10:20:30.6487|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 26.9891ms 200 application/json; charset=utf-8 
