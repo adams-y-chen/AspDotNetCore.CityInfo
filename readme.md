@@ -10,3 +10,9 @@ The repo contains code that demostrates:
 3. REST API CRUD implementation.
 4. Relational model example.
 5. Config and logging.
+
+
+Other repos:
+https://github.com/KevinDockx/BuildingRESTfulAPIAspNetCore3
+https://github.com/KevinDockx/ImplementingAdvancedRESTfulConcernsAspNetCore3
+https://github.com/KevinDockx/SecuringAspNetCore3WithOAuth2AndOIDC
