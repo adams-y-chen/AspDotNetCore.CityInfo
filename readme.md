@@ -9,3 +9,4 @@ The repo contains code that demostrates:
 2. Entity Framework Core and repository pattern. Auto Mapper.
 3. REST API CRUD implementation.
 4. Relational model example.
+5. Config and logging.
