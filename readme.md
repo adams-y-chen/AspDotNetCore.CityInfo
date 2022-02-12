@@ -1,6 +1,4 @@
-Building Your First API with ASP.NET Core.
-
-This is the practise code using ASP.net core 3.1.
+This is the practise code for "Building Your First API with ASP.NET Core" using ASP.net core 3.1.
 
 Course can be found at: https://app.pluralsight.com/library/courses/asp-dotnet-core-api-building-first/table-of-contents
 
